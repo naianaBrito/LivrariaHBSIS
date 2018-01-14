@@ -1,0 +1,32 @@
+﻿@model IEnumerable<LivrariaDTO.EditoraDTO>
+
+@{
+    ViewBag.Title = "Listar Editora";
+}
+
+<h2>Listar Editora</h2>
+
+<p>
+   @Html.ActionLink("Novo Registro", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeEditora)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeEditora)
+        </td>
+        <td>
+            <a href="@Url.Action("Edit", "Editora", new { id = item.IDEditora })" class="btn btn-warning btn-sm"><span title="Editar" class="glyphicon glyphicon-pencil"></span></a>
+            <a href="@Url.Action("Details", "Editora", new { id = item.IDEditora })" class="btn btn-info btn-sm"><span title="Detalhar" class="glyphicon glyphicon-search"></span></a>
+            <a href="@Url.Action("Delete", "Editora", new { id = item.IDEditora })" class="btn btn-danger btn-sm"><span title="Excluir" class="glyphicon glyphicon-trash"></span></a>
+        </td>
+    </tr>
+}
+</table>

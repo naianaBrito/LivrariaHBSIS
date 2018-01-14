@@ -1,0 +1,82 @@
+﻿@model IEnumerable<LivrariaDTO.LivroDTO>
+
+@{
+    ViewBag.Title = "Listar Livro";
+}
+
+<h2>Listar Livro</h2>
+
+<p>
+    @Html.ActionLink("Novo Registro", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ISBN)
+        </th>       
+        <th>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IDEditora)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Edicao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnoPublicacao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IDAutor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IDGenero)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Preco)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(model => item.ISBN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Titulo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Editora.NomeEditora)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Edicao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnoPublicacao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Autor.NomeAutor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Genero.DescricaoGenero)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantidade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Preco)
+        </td>
+       
+        <td>
+            <a href="@Url.Action("Edit", "Livro", new { id = item.IDLivro })" class="btn btn-warning btn-sm"><span title="Editar" class="glyphicon glyphicon-pencil"></span></a>
+            <a href="@Url.Action("Details", "Livro", new { id = item.IDLivro })" class="btn btn-info btn-sm"><span title="Detalhar" class="glyphicon glyphicon-search"></span></a>
+            <a href="@Url.Action("Delete", "Livro", new { id = item.IDLivro })" class="btn btn-danger btn-sm"><span title="Excluir" class="glyphicon glyphicon-trash"></span></a>
+        </td>
+    </tr>
+}
+
+</table>

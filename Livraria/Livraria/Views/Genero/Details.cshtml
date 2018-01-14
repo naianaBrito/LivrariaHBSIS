@@ -1,0 +1,25 @@
+﻿@model LivrariaDTO.GeneroDTO
+
+@{
+    ViewBag.Title = "Detalhar Gênero";
+}
+
+<h2>Detalhar Gênero</h2>
+
+<div>   
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DescricaoGenero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescricaoGenero)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.IDGenero }, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-default" })
+</p>

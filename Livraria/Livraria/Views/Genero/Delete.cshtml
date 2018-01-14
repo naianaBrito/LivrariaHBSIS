@@ -1,0 +1,35 @@
+﻿@model LivrariaDTO.GeneroDTO
+
+@{
+    ViewBag.Title = "Excluir Gênero";
+}
+
+<h2>Excluir Gênero</h2>
+
+<h3>Deseja realmente excluir o registro?</h3>
+<div>
+    @if (ViewBag.Exception != null)
+    {
+        @Html.Partial("_Erro", (string)ViewBag.Exception)
+    }
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DescricaoGenero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescricaoGenero)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Excluir" class="btn btn-primary" />
+            @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-default" })
+        </div>
+    }
+</div>

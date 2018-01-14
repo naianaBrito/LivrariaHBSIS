@@ -1,0 +1,11 @@
+C:\Projetos\Livraria\LivrariaBLL\bin\Debug\LivrariaBLL.dll
+C:\Projetos\Livraria\LivrariaBLL\bin\Debug\LivrariaBLL.pdb
+C:\Projetos\Livraria\LivrariaBLL\bin\Debug\LivrariaDAL.dll
+C:\Projetos\Livraria\LivrariaBLL\bin\Debug\LivrariaDTO.dll
+C:\Projetos\Livraria\LivrariaBLL\bin\Debug\EntityFramework.dll
+C:\Projetos\Livraria\LivrariaBLL\bin\Debug\LivrariaDAL.pdb
+C:\Projetos\Livraria\LivrariaBLL\bin\Debug\LivrariaDTO.pdb
+C:\Projetos\Livraria\LivrariaBLL\bin\Debug\EntityFramework.xml
+C:\Projetos\Livraria\LivrariaBLL\obj\Debug\LivrariaBLL.csprojResolveAssemblyReference.cache
+C:\Projetos\Livraria\LivrariaBLL\obj\Debug\LivrariaBLL.dll
+C:\Projetos\Livraria\LivrariaBLL\obj\Debug\LivrariaBLL.pdb

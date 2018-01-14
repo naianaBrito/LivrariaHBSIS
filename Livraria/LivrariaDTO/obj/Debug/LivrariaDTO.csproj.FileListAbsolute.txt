@@ -1,0 +1,8 @@
+C:\Projetos\Livraria\LivrariaDTO\bin\Debug\LivrariaDTO.dll
+C:\Projetos\Livraria\LivrariaDTO\bin\Debug\LivrariaDTO.pdb
+C:\Projetos\Livraria\LivrariaDTO\bin\Debug\EntityFramework.dll
+C:\Projetos\Livraria\LivrariaDTO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Projetos\Livraria\LivrariaDTO\bin\Debug\EntityFramework.xml
+C:\Projetos\Livraria\LivrariaDTO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Projetos\Livraria\LivrariaDTO\obj\Debug\LivrariaDTO.dll
+C:\Projetos\Livraria\LivrariaDTO\obj\Debug\LivrariaDTO.pdb

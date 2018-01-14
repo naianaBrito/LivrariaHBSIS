@@ -1,0 +1,33 @@
+﻿@model IEnumerable<LivrariaDTO.GeneroDTO>
+
+@{
+    ViewBag.Title = "Listar Gênero";
+}
+
+<h2>Listar Gênero</h2>
+
+<p>
+    @Html.ActionLink("Novo Registro", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DescricaoGenero)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DescricaoGenero)
+        </td>
+        <td>
+            <a href="@Url.Action("Edit", "Genero", new { id = item.IDGenero })" class="btn btn-warning btn-sm"><span title="Editar" class="glyphicon glyphicon-pencil"></span></a>
+            <a href="@Url.Action("Details", "Genero", new { id = item.IDGenero })" class="btn btn-info btn-sm"><span title="Detalhar" class="glyphicon glyphicon-search"></span></a>
+            <a href="@Url.Action("Delete", "Genero", new { id = item.IDGenero })" class="btn btn-danger btn-sm"><span title="Excluir" class="glyphicon glyphicon-trash"></span></a>
+        </td>
+    </tr>
+}
+
+</table>

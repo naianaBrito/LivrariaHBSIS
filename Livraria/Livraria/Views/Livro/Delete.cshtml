@@ -1,0 +1,94 @@
+﻿@model LivrariaDTO.LivroDTO
+
+@{
+    ViewBag.Title = "Excluir Livro";
+}
+
+<h2>Excluir Livro</h2>
+
+<h3>Deseja realmente excluir o registro?</h3>
+<div> 
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ISBN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ISBN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IDEditora)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Editora.NomeEditora)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Edicao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Edicao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnoPublicacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnoPublicacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IDAutor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Autor.NomeAutor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IDGenero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genero.DescricaoGenero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantidade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Preco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Preco)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">          
+            <input type="submit" value="Excluir" class="btn btn-primary" />
+            @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-default" })
+        </div>
+    }
+</div>
